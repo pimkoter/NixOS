@@ -8,6 +8,9 @@
 
   # Monitor Settings (update after installation for your displays)
   extraMonitorSettings = ''
+    monitor=DP-6,preferred,auto-left,1
+    monitor=DP-5,preferred,auto,1
+    monitor=eDP-2,preferred,auto-right,1
     monitor=,preferred,auto,1
   '';
 
