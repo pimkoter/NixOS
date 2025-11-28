@@ -5,7 +5,7 @@
       fira-code
       fira-code-symbols
       noto-fonts
-      noto-fonts-emoji
+      noto-fonts-color-emoji
       noto-fonts-cjk-sans
       font-awesome
       jetbrains-mono
@@ -18,7 +18,7 @@
       nerd-fonts.hack
       #symbola   #still 404 error
       terminus_font
-      inter  # Inter Variable font for DankMaterialShell
+      inter # Inter Variable font for DankMaterialShell
     ];
   };
 }
