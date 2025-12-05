@@ -109,7 +109,7 @@ echo ""
 echo -e "${YELLOW}Tip: Find your timezone at: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones${NC}"
 echo ""
 read -p "Enter timezone [America/New_York]: " timezone
-timezone=${timezone:-America/New_York}
+timezone=${timezone:-Europe/Amsterdam}
 print_success "Timezone: $timezone"
 echo ""
 
