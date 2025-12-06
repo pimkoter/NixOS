@@ -62,7 +62,7 @@ in {
   wayland.windowManager.hyprland = {
     enable = true;
     # Use stable package from nixpkgs to avoid version parsing issues
-    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     systemd = {
       enable = true;
       enableXdgAutostart = true;
@@ -201,15 +201,26 @@ in {
     };
 
     extraConfig = ''
-      ${extraMonitorSettings}
-      # Enable blur on bar
-      ${
-        if actualBarChoice == "dms"
-        then "layerrule = blur,quickshell"
-        else if actualBarChoice == "noctalia"
-        then "layerrule = blur,noctalia"
-        else "layerrule = blur,waybar"
+      monitorv2 {
+        output = DP-6
+        mode = preferred
+        position = auto-left
+        scale = 1
       }
+
+      monitorv2 {
+        output = DP-4
+        mode = preferred
+        position = auto
+        scale = 1
+       }
+
+       monitorv2 {
+         output = eDP-2
+         mode = preferred
+         position = auto-right
+         scale = 1
+       }
     '';
   };
 }

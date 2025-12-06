@@ -8,9 +8,26 @@
 
   # Monitor Settings (update after installation for your displays)
   extraMonitorSettings = ''
-    monitor=DP-6,preferred,auto-left,1
-    monitor=DP-5,preferred,auto,1
-    monitor=eDP-2,preferred,auto-right,1
+     monitorv2 {
+       output = DP-6
+       mode = preferred
+       position = auto-left
+       scale = 1
+     }
+
+    monitorv2 {
+      output = DP-5
+      mode = preferred
+      position = auto
+      scale = 1
+     }
+
+     monitorv2 {
+       output = eDP-2
+       mode = preferred
+       position = auto-right
+       scale = 1
+     }
   '';
 
   # Waybar Settings

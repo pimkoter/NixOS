@@ -22,10 +22,5 @@
       #alias c="clear"
       #eval "$(zoxide init zsh)"
       #eval "$(oh-my-posh init zsh --config $HOME/.config/powerlevel10k_rainbow.omp.json)"
-      alias = {
-        versions="sudo nix-env --list-generations -p /nix/var/nix/profiles/system";
-        neofetch="fastfetch";
-      };
-
   '';
 }
