@@ -37,7 +37,7 @@
     flake-utils,
     ...
   } @ inputs: let
-    stdenv.hostPlatform.system = "x86_64-linux";
+    system = "x86_64-linux";
 
     # Helper function to create a host configuration
     mkHost = {
@@ -46,15 +46,15 @@
       username,
     }:
       nixpkgs.lib.nixosSystem {
-        system = stdenv.hostPlatform.system;
+        system = system;
         specialArgs = {
           inherit inputs;
           host = hostname;
           inherit profile;
           inherit username;
-          zen-browser = inputs.zen-browser.packages.${stdenv.hostPlatform.system}.default;
+          zen-browser = inputs.zen-browser.packages.${system}.default;
 
-          helium-browser = inputs.helium-browser.packages.${stdenv.hostPlatform.system}.helium-browser;
+          helium-browser = inputs.helium-browser.packages.${system}.helium-browser;
         };
         modules = [
           ./profiles/${profile}
