@@ -203,22 +203,22 @@ in {
     extraConfig = ''
       monitorv2 {
         output = DP-6
-        mode = preferred
-        position = auto-left
+        mode = 1920x1080@60
+        position = -1920x0
         scale = 1
       }
 
       monitorv2 {
         output = DP-4
-        mode = preferred
-        position = auto
+        mode = 1920x1080@60
+        position = 0x0
         scale = 1
        }
 
        monitorv2 {
          output = eDP-2
-         mode = preferred
-         position = auto-right
+         mode = 1920x1080@60
+         position = 1920x0
          scale = 1
        }
     '';
