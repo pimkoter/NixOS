@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     #QOL
-    vesktop # Discord frontend
+    vesktop-bin # Discord frontend
     spotify # Music client
 
     # Gaming

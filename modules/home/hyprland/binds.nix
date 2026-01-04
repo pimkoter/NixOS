@@ -64,7 +64,6 @@
       "$modifier CTRL,E,exec,emopicker9000"
       "$modifier,V,exec,vesktop"
       "$modifier SHIFT,S,exec,screenshootin"
-      "$modifier,D,exec,vesktop"
       "$modifier SHIFT,V,exec,virt-manager"
       "$modifier,S,exec,steam"
       "$modifier SHIFT,O,exec,flatpak run com.obsproject.Studio"

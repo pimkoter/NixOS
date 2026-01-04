@@ -1,10 +1,7 @@
-{ inputs, ... }:
-{
+{inputs, ...}: {
   imports = [
     ./ai-code-editors.nix
     ./boot.nix
-    ./browsers-extra.nix
-    ./communication.nix
     ./gaming-support.nix
     ./flatpak.nix
     ./flutter-dev.nix
