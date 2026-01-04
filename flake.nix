@@ -38,7 +38,6 @@
     ...
   } @ inputs: let
     system = "x86_64-linux";
-
     # Helper function to create a host configuration
     mkHost = {
       hostname,

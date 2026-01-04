@@ -191,7 +191,7 @@
         nix = {
           enable = true;
           lsp = {
-            server = "nil";
+            servers = ["nil"];
           };
         };
         clang = {
@@ -211,7 +211,7 @@
           lsp = {
             enable = true;
           };
-          format.type = "prettierd";
+          format.type = ["prettierd"];
           extensions.ts-error-translator = {
             enable = true;
           };
@@ -224,14 +224,13 @@
         };
         css = {
           enable = true;
-          format.type = "prettierd";
+          format.type = ["prettierd"];
         };
         typst = {
           enable = true;
         };
         rust = {
-          enable = true;
-          crates = {
+          extensions.crates-nvim = {
             enable = true;
           };
         };
@@ -434,7 +433,7 @@
   };
 
   home.activation = {
-    dirtytalkUpdate = config.lib.dag.entryAfter ["writeBoundary"] ''
+    dirtytalkUpdate = config.lib.dag.entryAfter ["writeboundary"] ''
       # Check if programmingWordlist file already exists to avoid unnecessary downloads
       WORDLIST_FILE="$HOME/.config/nvim/spell/programming.utf-8.add"
       if [ ! -f "$WORDLIST_FILE" ]; then
@@ -450,4 +449,3 @@
     '';
   };
 }
-
