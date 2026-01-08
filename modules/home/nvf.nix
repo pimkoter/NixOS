@@ -230,6 +230,7 @@
           enable = true;
         };
         rust = {
+          enable = true;
           extensions.crates-nvim = {
             enable = true;
           };
@@ -433,7 +434,7 @@
   };
 
   home.activation = {
-    dirtytalkUpdate = config.lib.dag.entryAfter ["writeboundary"] ''
+    dirtytalkUpdate = config.lib.dag.entryAfter ["writeBoundary"] ''
       # Check if programmingWordlist file already exists to avoid unnecessary downloads
       WORDLIST_FILE="$HOME/.config/nvim/spell/programming.utf-8.add"
       if [ ! -f "$WORDLIST_FILE" ]; then

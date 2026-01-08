@@ -63,7 +63,7 @@
       "SUPER,B,exec,${browser}"
       "SUPER,Y,exec,kitty -e yazi"
       "SUPER CTRL,E,exec,emopicker9000"
-      "SUPER,V,exec,vesktop"
+      "SUPER,V,exec,legcord"
       "SUPER SHIFT,S,exec,screenshootin"
       "SUPER SHIFT,V,exec,virt-manager"
       "SUPER,S,exec,steam"

@@ -10,7 +10,6 @@
       enable = false;
       defaultEditor = false;
     };
-    firefox.enable = false; # Firefox is not installed by default
     dconf.enable = true;
     seahorse.enable = true;
     # Hyprland always enabled - both WMs available at login
@@ -22,7 +21,6 @@
     hyprlock.enable = true; # Resolve pam issue, can be disabled per-host via enableHyprlock
     fuse.userAllowOther = true;
     mtr.enable = true;
-    adb.enable = true;
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;
@@ -72,8 +70,8 @@
     ncdu # Disk Usage Analyzer With Ncurses Interface
     nitch # small fetch util
     # Nix Language Packages
-    nixfmt-rfc-style # Nix Formatter
     nixd # Nix Language Server
+    nixfmt
     nil # Nix Language Server
     onefetch # shows current build info and stats
     pavucontrol # For Editing Audio Levels & Devices
@@ -92,7 +90,6 @@
     waypaper # backup wallpaper GUI
     wget # Tool For Fetching Files With Links
     xwayland-satellite # Xwayland outside your Wayland compositor
-    ytmdl # Tool For Downloading Audio From YouTube
     nwg-displays # Manage Displays
     nwg-drawer # drawer GUI
     nwg-look # Look GUI
@@ -101,10 +98,5 @@
     # Development Tools
     zed-editor # Code editor with AI features
     popsicle
-    # AI code editors (cursor, claude-code, gemini-cli) moved to modules/core/ai-code-editors.nix
-    gum
-    gtk3
-    gtk4
-    localsend
   ];
 }
