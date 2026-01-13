@@ -1,0 +1,46 @@
+{
+  pkgs,
+  inputs,
+  ...
+}: {
+  environment.systemPackages = with pkgs; [
+    bat
+    blueman
+    bottom
+    cava
+    cmatrix
+    curl
+    fastfetch
+    ffmpeg
+    fzf
+    gcc
+    git
+    grub2
+    kitty
+    lazygit
+    legcord
+    ly
+    nautilus
+    neovim
+    nh
+    pavucontrol
+    polkit
+    qbittorrent
+    ripgrep
+    spotify
+    starship
+    steam
+    swayidle
+    swaylock-effects
+    swaynotificationcenter
+    wget
+    wl-clipboard-rs
+    wlogout
+    wofi
+    xwayland
+    xwayland-satellite
+
+    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+  ];
+}

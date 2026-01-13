@@ -1,0 +1,14 @@
+{
+  imports = [
+    ./boot.nix
+    ./drivers.nix
+    ./hardware-configuration.nix
+    ./miscellaneous.nix
+    ./networking.nix
+    ./pkgs.nix
+    ./programs.nix
+    ./services.nix
+    ./stylix.nix
+    ./users.nix
+  ];
+}
