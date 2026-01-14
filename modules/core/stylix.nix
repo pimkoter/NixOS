@@ -20,6 +20,7 @@
     #   base0E = "b45bcf";
     #   base0F = "00f769";
     # };
+
     polarity = "dark";
     opacity.terminal = 0.8;
     cursor = {

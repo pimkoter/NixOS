@@ -18,7 +18,7 @@
       inactive_tab_font_style = "bold";
       tab_bar_edge = "top";
       tab_bar_margin_width = 0;
-      tab_bar_style = "powerline";
+      tab_bar_style = "hidden";
       enabled_layouts = "splits";
     };
     extraConfig = ''

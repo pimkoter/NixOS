@@ -31,16 +31,14 @@
     ...
   }: let
     system = "x86_64-linux";
-    globals = {
-      UserName = "pim";
-      HostName = "NixBTW";
-      GitName = "PimKoter";
-      GitEmail = "Pim@Koter";
+    userdata = {
+      user = "pim";
+      host = "NixBTW";
     };
   in {
     nixosConfigurations.NixBTW = nixpkgs.lib.nixosSystem {
       inherit system;
-      specialArgs = {inherit globals system inputs;};
+      specialArgs = {inherit userdata system inputs;};
       modules = [
         ./modules/core/default.nix
         inputs.stylix.nixosModules.stylix
@@ -49,7 +47,7 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            extraSpecialArgs = {inherit globals system inputs;};
+            extraSpecialArgs = {inherit userdata system inputs;};
             users.pim = import ./modules/home/home.nix;
           };
         }

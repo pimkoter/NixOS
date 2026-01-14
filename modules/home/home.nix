@@ -2,17 +2,19 @@
   home.stateVersion = "25.05";
 
   imports = [
-    ./noctalia.nix
-    ./niri/niri.nix
+    ./bat.nix
     ./eza.nix
-    ./nvf.nix
-    ./wofi.nix
     ./fastfetch.nix
-    ./kitty.nix
-    ./starship.nix
     ./git.nix
-    ./zsh.nix
+    ./kitty.nix
+    ./niri.nix
+    ./noctalia.nix
+    ./nvf.nix
+    ./starship.nix
+    ./swaylock.nix
+    ./wofi.nix
     ./zoxide.nix
+    ./zsh.nix
   ];
 
   ########################################

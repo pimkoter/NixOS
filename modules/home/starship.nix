@@ -13,7 +13,6 @@ in {
       add_newline = false;
       format = lib.concatStrings [
         "$nix_shell"
-        "$hostname"
         "$directory"
         "$git_branch"
         "$git_state"
