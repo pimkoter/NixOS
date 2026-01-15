@@ -11,7 +11,7 @@
       restart = true;
       settings = {
         default_session = {
-          command = "${pkgs.greetd.tuigreet}/bin/tuigreet -t -r --remember-session";
+          command = "${pkgs.tuigreet}/bin/tuigreet -t -r --remember-session";
           user = "greeter";
         };
       };

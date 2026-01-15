@@ -20,6 +20,7 @@
       tab_bar_margin_width = 0;
       tab_bar_style = "hidden";
       enabled_layouts = "splits";
+      shell_integration = "no";
     };
     extraConfig = ''
       # Clipboard

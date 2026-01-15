@@ -10,6 +10,7 @@
     cava
     cmatrix
     curl
+    evince
     fastfetch
     ffmpeg
     flatpak
@@ -18,6 +19,7 @@
     git
     grub2
     greetd
+    heroic
     kitty
     lazygit
     legcord

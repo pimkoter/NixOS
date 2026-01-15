@@ -16,6 +16,7 @@
     historySubstringSearch.enable = true;
 
     initContent = ''
+      export KITTY_SHELL_INTEGRATION=""
       fastfetch
        echo "Bonjour Nerd"
     '';
