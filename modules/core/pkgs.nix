@@ -16,10 +16,10 @@
     gcc
     git
     grub2
+    greetd
     kitty
     lazygit
     legcord
-    ly
     nautilus
     neovim
     nh
@@ -39,6 +39,7 @@
     wofi
     xwayland
     xwayland-satellite
+    zed-editor
 
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default

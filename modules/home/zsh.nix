@@ -27,7 +27,8 @@
       cat = "bat";
       c = "clear";
       bottom = "btm";
-      update = "sudo nixos-rebuild test --flake ~/.System/.#NixBTW";
+      test = "sudo nixos-rebuild test --flake ~/.System/.#NixBTW";
+      update = "cd ~/.System && nix flake update";
       upgrade = "sudo nixos-rebuild switch --flake ~/.System/.#NixBTW";
       ssn = "sudo systemctl poweroff";
       ssr = "sudo systemctl reboot";

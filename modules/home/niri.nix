@@ -8,7 +8,6 @@
         spawn-at-startup "noctalia-shell"
         spawn-at-startup "spotify"
         spawn-at-startup "legcord"
-        spawn-at-startup "swayidle -w timeout 600 'swaylock -f' timeout 900 'niri msg output power off' resume 'niri msg output power on' before-sleep 'swaylock -f'"
 
     // =====================
     // KEYBINDS
@@ -20,19 +19,19 @@
 
 
         // --- Applications ---
-        Mod+Space	hotkey-overlay-title="Run an Application" { spawn-sh "wofi --show drun"; }
+        Mod+Space	 cooldown-ms=200            { spawn-sh "wofi --show drun"; }
 
-        Mod+T		hotkey-overlay-title="Terminal"         { spawn "kitty"; }
-        Mod+D		hotkey-overlay-title="Legcord"          { spawn "legcord"; }
-        Mod+F		hotkey-overlay-title="File Manager"     { spawn "nautilus"; }
-        Mod+B		hotkey-overlay-title="Zen-browser"      { spawn "zen"; }
-        Mod+S		hotkey-overlay-title="Steam"            { spawn "steam"; }
-        Mod+Shift+M hotkey-overlay-title="Mixer"            { spawn "pavucontrol"; }
+        Mod+T		 cooldown-ms=200            { spawn "kitty"; }
+        Mod+D		 cooldown-ms=200            { spawn "legcord"; }
+        Mod+F		 cooldown-ms=200            { spawn "nautilus"; }
+        Mod+B		 cooldown-ms=200            { spawn "zen"; }
+        Mod+S		 cooldown-ms=200            { spawn "steam"; }
+        Mod+Shift+M  cooldown-ms=200            { spawn "pavucontrol"; }
 
         Mod+Ctrl+T { spawn "kitty" "--class=floating-kitty"; }
 
         // --- Lock / Accessibility ---
-        Super+Alt+L hotkey-overlay-title="Lock Screen" { spawn "swaylock"; }
+        Super+Alt+L  cooldown-ms=200            { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
 
         // --- Media / Volume ---
         XF86AudioRaiseVolume allow-when-locked=true {
