@@ -28,4 +28,8 @@
     enable = true;
     powerOnBoot = true;
   };
+
+  imports = [
+    ./CustomSystemD/default.nix
+  ];
 }

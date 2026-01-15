@@ -2,6 +2,7 @@
   imports = [
     ./boot.nix
     ./drivers.nix
+    ./flatpak.nix
     ./hardware-configuration.nix
     ./miscellaneous.nix
     ./networking.nix

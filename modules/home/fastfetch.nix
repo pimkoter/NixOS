@@ -13,8 +13,8 @@
 
       logo = {
         type = "kitty-direct";
-        height = 8;
-        width = 16;
+        height = 4;
+        width = 8;
         padding = {
           top = 2;
           left = 2;

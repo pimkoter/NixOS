@@ -12,6 +12,7 @@
     curl
     fastfetch
     ffmpeg
+    flatpak
     fzf
     gcc
     git
