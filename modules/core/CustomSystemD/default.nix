@@ -1,5 +1,0 @@
-{
-  imports = [
-    ./NetworkManager-restart.nix
-  ];
-}

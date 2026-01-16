@@ -29,7 +29,11 @@
     powerOnBoot = true;
   };
 
-  imports = [
-    ./CustomSystemD/default.nix
-  ];
+  # Service to revive NetworkManager if it dies
+  systemd.services.NetworkManager = {
+    serviceConfig = {
+      Restart = "on-failure";
+      RestartSec = 5;
+    };
+  };
 }
