@@ -26,6 +26,7 @@
     nautilus
     neovim
     nh
+    obsidian
     pavucontrol
     polkit
     qbittorrent

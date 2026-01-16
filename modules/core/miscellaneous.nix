@@ -1,5 +1,11 @@
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   xdg.portal.wlr.enable = true;
+
   fonts = {
     fontconfig.enable = true;
     packages = with pkgs; [
@@ -25,10 +31,10 @@
     "flakes"
   ];
 
+  nixpkgs.config.allowUnfree = true;
+
   time.timeZone = "Europe/Amsterdam";
   i18n.defaultLocale = "en_US.UTF-8";
 
   system.stateVersion = "25.11";
-
-  nixpkgs.config.allowUnfree = true;
 }
