@@ -27,6 +27,7 @@
         Mod+B		 cooldown-ms=200            { spawn "zen"; }
         Mod+S		 cooldown-ms=200            { spawn "steam"; }
         Mod+Shift+M  cooldown-ms=200            { spawn "pavucontrol"; }
+        Mod+Y        cooldown-ms=200            { spawn "kitty" "yazi" ; }
 
         Mod+Ctrl+T { spawn "kitty" "--class=floating-kitty"; }
 
