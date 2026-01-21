@@ -80,8 +80,6 @@
         Mod+Shift+Right { move-column-right; }
 
         Mod+Ctrl+H { move-column-left; }
-        Mod+Ctrl+J { move-window-down; }
-        Mod+Ctrl+K { move-window-up; }
         Mod+Ctrl+L { move-column-right; }
 
         Mod+Home        { focus-column-first; }
@@ -91,24 +89,17 @@
 
         // --- Monitor Focus ---
         Mod+Shift+H { focus-monitor-left; }
-        Mod+Shift+J { focus-monitor-down; }
-        Mod+Shift+K { focus-monitor-up; }
         Mod+Shift+L { focus-monitor-right; }
 
         Mod+Shift+Ctrl+H { move-column-to-monitor-left; }
-        Mod+Shift+Ctrl+J { move-column-to-monitor-down; }
-        Mod+Shift+Ctrl+K { move-column-to-monitor-up; }
         Mod+Shift+Ctrl+L { move-column-to-monitor-right; }
 
         // --- Workspaces ---
-        Mod+U { focus-workspace-down; }
-        Mod+I { focus-workspace-up; }
+        Mod+Shift+J { focus-workspace-down; }
+        Mod+Shift+K { focus-workspace-up; }
 
-        Mod+Ctrl+U { move-column-to-workspace-down; }
-        Mod+Ctrl+I { move-column-to-workspace-up; }
-
-        Mod+Shift+U { move-workspace-down; }
-        Mod+Shift+I { move-workspace-up; }
+        Mod+Ctrl+J { move-column-to-workspace-down; }
+        Mod+Ctrl+K { move-column-to-workspace-up; }
 
         // Workspace numbers
         Mod+1 { focus-workspace 1; }
@@ -264,6 +255,8 @@
     // WINDOW RULES
     // =====================
 
+    prefer-no-csd true
+
     window-rule {
         geometry-corner-radius 9
         clip-to-geometry true
@@ -276,6 +269,17 @@
         opacity 0.90
         default-column-width { fixed 1000; }
         default-window-height { fixed 700; }
+    }
+
+    window-rule {
+        match app-id="Minecraft"
+        open-fullscreen true
+        border {
+          off
+        }
+        focus-ring{
+          off
+        }
     }
   '';
 }

@@ -16,7 +16,9 @@
     flatpak
     fzf
     gcc
+    gdu # Graphical Disk Usage
     git
+    gping # Graphical Ping Utility
     grub2
     greetd
     heroic
@@ -29,6 +31,7 @@
     obsidian
     pavucontrol
     polkit
+    prismlauncher
     qbittorrent
     ripgrep
     spotify
@@ -37,6 +40,7 @@
     swayidle
     swaylock-effects
     swaynotificationcenter
+    thunderbird # Email Client
     wget
     wl-clipboard-rs
     wlogout

@@ -1,4 +1,4 @@
-{config, ...}: {
+{
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true;
@@ -16,7 +16,6 @@
     historySubstringSearch.enable = true;
 
     initContent = ''
-      export KITTY_SHELL_INTEGRATION=""
       fastfetch
     '';
 
@@ -33,6 +32,10 @@
       ssn = "sudo systemctl poweroff";
       ssr = "sudo systemctl reboot";
       ff = "fastfetch";
+
+      ping = "gping -c 3";
+
+      ssh = "kitten ssh";
 
       ls = "eza";
       lt = "eza --tree --level-2";
