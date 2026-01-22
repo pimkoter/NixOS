@@ -11,7 +11,6 @@
     ./noctalia.nix
     ./nvf.nix
     ./starship.nix
-    ./swaylock.nix
     ./tmux.nix
     ./yazi/default.nix
     ./zoxide.nix
