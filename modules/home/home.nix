@@ -13,7 +13,6 @@
     ./starship.nix
     ./swaylock.nix
     ./tmux.nix
-    ./wofi.nix
     ./yazi/default.nix
     ./zoxide.nix
     ./zsh.nix

@@ -19,7 +19,7 @@
 
 
         // --- Applications ---
-        Mod+Space	 cooldown-ms=200            { spawn-sh "wofi --show drun"; }
+        Mod+Space	 cooldown-ms=200            { spawn-sh "noctalia-shell ipc call launcher toggle"; }
 
         Mod+T		 cooldown-ms=200            { spawn "kitty"; }
         Mod+D		 cooldown-ms=200            { spawn "legcord"; }
@@ -32,7 +32,7 @@
         Mod+Ctrl+T { spawn "kitty" "--class=floating-kitty"; }
 
         // --- Lock / Accessibility ---
-        Super+Alt+L  cooldown-ms=200            { spawn-sh "qs -c noctalia-shell ipc call lockScreen toggle"; }
+        Super+Alt+L  cooldown-ms=200            { spawn-sh "noctalia-shell ipc call lockScreen toggle"; }
 
         // --- Media / Volume ---
         XF86AudioRaiseVolume allow-when-locked=true {
@@ -274,15 +274,6 @@
         opacity 0.90
         default-column-width { fixed 1000; }
         default-window-height { fixed 700; }
-    }
-
-    window-rule {
-        match app-id="Minecraft"
-        open-fullscreen true
-        default-column-width { fixed:1920 }
-        default-column-height { fixed:1080 }
-        border { off }
-        focus-ring{ off }
     }
   '';
 }

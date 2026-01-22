@@ -112,22 +112,9 @@ def main():
   lib,
   pkgs,
   inputs,
-  host,
   ...
 }}:
-let
-  variables = import ../../../hosts/${{host}}/variables.nix;
-  barChoice = variables.barChoice or "waybar";
-  enableNoctalia = barChoice == "noctalia";
-in
 {{
-  imports = lib.optionals enableNoctalia [
-    inputs.noctalia.homeModules.default
-  ];
-
-  config = lib.mkIf enableNoctalia {{
-    programs.waybar.enable = lib.mkForce false;
-    home.packages = [ inputs.noctalia.packages.${{pkgs.system}}.default ];
 
     home.file.".config/noctalia/settings.json.template" = {{
       text = builtins.toJSON {settings};
@@ -163,7 +150,6 @@ in
       $DRY_RUN_CMD echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
       $DRY_RUN_CMD echo ""
     '';
-  }};
 }}
 """
 
