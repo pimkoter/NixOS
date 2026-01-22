@@ -275,5 +275,12 @@
         default-column-width { fixed 1000; }
         default-window-height { fixed 700; }
     }
+
+    window-rule {
+        match app-id="Minecraft"
+        open-fullscreen true
+        max-width 1920
+        max-height 1080
+    }
   '';
 }
