@@ -7,7 +7,7 @@
 
         spawn-at-startup "noctalia-shell"
         spawn-at-startup "spotify"
-        spawn-at-startup "legcord"
+        spawn-at-startup "vesktop"
 
     // =====================
     // KEYBINDS
@@ -161,6 +161,11 @@
     // =====================
     // ENVIRONMENT
     // =====================
+
+    hotkey-overlay {
+        skip-at-startup
+    }
+
     environment {
         QT_QPA_PLATFORM "wayland"
         ELECTRON_OZONE_PLATFORM_HINT "auto"

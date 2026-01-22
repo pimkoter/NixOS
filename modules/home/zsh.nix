@@ -33,8 +33,6 @@
       ssr = "sudo systemctl reboot";
       ff = "fastfetch";
 
-      ping = "gping -c 3";
-
       ssh = "kitten ssh";
 
       ls = "eza";

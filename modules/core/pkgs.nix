@@ -24,7 +24,6 @@
     heroic
     kitty
     lazygit
-    legcord
     nautilus
     neovim
     nh
@@ -41,6 +40,7 @@
     swaylock-effects
     swaynotificationcenter
     thunderbird # Email Client
+    vesktop # Discord Client
     wget
     wl-clipboard-rs
     wlogout
