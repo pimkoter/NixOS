@@ -279,12 +279,10 @@
     window-rule {
         match app-id="Minecraft"
         open-fullscreen true
-        border {
-          off
-        }
-        focus-ring{
-          off
-        }
+        default-column-width { fixed:1920 }
+        default-column-height { fixed:1080 }
+        border { off }
+        focus-ring{ off }
     }
   '';
 }
