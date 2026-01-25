@@ -8,6 +8,8 @@
         "networkmanager"
         "wireshark"
         "docker"
+        "libvirtd"
+        "kvm"
       ];
       shell = pkgs.zsh;
       ignoreShellProgramCheck = true;

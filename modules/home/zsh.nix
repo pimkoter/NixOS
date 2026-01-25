@@ -16,7 +16,10 @@
     historySubstringSearch.enable = true;
 
     initContent = ''
-      fastfetch
+      # Only run fastfetch if the terminal is NOT a decorative terminal
+      if [[ "$TERM_PROGRAM" != "kitty" || "$KITTY_WINDOW_CLASS" != "decor-kitty" ]]; then
+          fastfetch
+      fi
     '';
 
     shellAliases = {

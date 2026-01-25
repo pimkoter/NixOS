@@ -1,4 +1,6 @@
-{
+{config, ...}: let
+  colors = config.stylix.base16Scheme;
+in {
   xdg.configFile."niri/config.kdl".text = ''
 
     // =====================
@@ -8,6 +10,8 @@
         spawn-at-startup "noctalia-shell"
         spawn-at-startup "spotify"
         spawn-at-startup "vesktop"
+
+        spawn-at-startup "kitty --class=decor-kitty -e cava";
 
     // =====================
     // KEYBINDS
@@ -47,7 +51,6 @@
         XF86AudioMicMute allow-when-locked=true {
             spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
         }
-
         XF86AudioPlay allow-when-locked=true { spawn-sh "playerctl play-pause"; }
         XF86AudioStop allow-when-locked=true { spawn-sh "playerctl stop"; }
         XF86AudioPrev allow-when-locked=true { spawn-sh "playerctl previous"; }
@@ -111,7 +114,6 @@
         Mod+7 { focus-workspace 7; }
         Mod+8 { focus-workspace 8; }
         Mod+9 { focus-workspace 9; }
-
         Mod+Ctrl+1 { move-column-to-workspace 1; }
         Mod+Ctrl+2 { move-column-to-workspace 2; }
         Mod+Ctrl+3 { move-column-to-workspace 3; }
@@ -205,6 +207,7 @@
         always-center-single-column
 
         preset-column-widths {
+            proportion 0.33333
             proportion 0.5
             proportion 0.66667
             proportion 1.0
@@ -214,16 +217,13 @@
 
         focus-ring {
             off
-            width 6
-            active-color "#7fc8ff"
-            inactive-color "#505050"
         }
 
         border {
             width 2
-            active-color "#cba6f7"
-            inactive-color "#45475a"
-            urgent-color "#f5c2e7"
+            active-color "#${colors.base0D}"
+            inactive-color "#${colors.base03}"
+            urgent-color "#${colors.base08}"
         }
 
         shadow {
@@ -269,18 +269,23 @@
     }
 
     window-rule {
-        match app-id=r#"^floating-kitty$"#
-        open-floating true
-        opacity 0.90
-        default-column-width { fixed 1000; }
-        default-window-height { fixed 700; }
-    }
-
-    window-rule {
         match app-id="Minecraft"
         open-fullscreen true
         max-width 1920
         max-height 1080
     }
+
+    window-rule {
+        match app-id=r#"^decor-kitty$"#
+        open-floating true
+        open-focused false
+        baba-is-float true
+        draw-border-with-background false
+        opacity 0.4
+
+        default-column-width { fixed 600; }
+        default-window-height { fixed 400; }
+    }
+
   '';
 }
