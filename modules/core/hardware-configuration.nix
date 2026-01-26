@@ -6,7 +6,11 @@
   lib,
   modulesPath,
   ...
-}: {
+}: let
+  rootID = "a60ce0ee-3248-435c-b217-e94213c92527";
+  bootID = "D222-EF51";
+  homeID = "c00a3013-1baf-4a62-8aed-13d0697bb4c5";
+in {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
@@ -21,17 +25,17 @@
 
   fileSystems = {
     "/" = {
-      device = "/dev/disk/by-uuid/f3e6826b-1fc9-4e09-a186-22ad36a3ff07";
+      device = "/dev/disk/by-uuid/${rootID}";
       fsType = "ext4";
     };
 
     "/boot" = {
-      device = "/dev/disk/by-uuid/F28D-757A";
+      device = "/dev/disk/by-uuid/${bootID}";
       fsType = "vfat";
     };
 
     "/home" = {
-      device = "/dev/disk/by-uuid/c00a3013-1baf-4a62-8aed-13d0697bb4c5";
+      device = "/dev/disk/by-uuid/${homeID}";
       fsType = "ext4";
     };
   };
