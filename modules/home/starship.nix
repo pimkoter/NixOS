@@ -69,7 +69,7 @@ in {
         format = "[ $time ]($style)";
       };
 
-      clanguage = {
+      c = {
         symbol = " ";
         style = "bg:#${c.base0D}";
         format = "[ $symbol ($version) ]($style)";

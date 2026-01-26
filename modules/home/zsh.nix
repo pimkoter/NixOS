@@ -35,6 +35,7 @@
       ssn = "sudo systemctl poweroff";
       ssr = "sudo systemctl reboot";
       ff = "fastfetch";
+      gens = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
 
       ssh = "kitten ssh";
 
