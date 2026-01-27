@@ -21,7 +21,8 @@ in {
         "$docker_context"
         "[](fg:#${c.base0C} bg:#${c.base0A})"
         "$time"
-        "[ ](fg:#${c.base0A})"
+        "[](fg:#${c.base0A})"
+        "  "
       ];
 
       command_timeout = 5000;
