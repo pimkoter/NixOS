@@ -10,7 +10,7 @@ in {
     settings = {
       format = lib.concatStrings [
         "[](#${c.base01})"
-        "$python$username"
+        "$python$os"
         "[](bg:#${c.base02} fg:#${c.base01})"
         "$directory"
         "[](fg:#${c.base02} bg:#${c.base03})"
