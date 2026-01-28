@@ -252,7 +252,7 @@ in {
 
     output "eDP-2" {
         mode "2560x1080@60"
-        scale 1.5
+        scale 2
         position x=3840 y=0
     }
 

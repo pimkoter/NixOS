@@ -6,11 +6,6 @@
       enable = true;
       checkReversePath = "loose";
     };
-    fail2ban = {
-      enable = true;
-      bantime = "10m";
-      bantime-increment.factor = "6";
-    };
     hosts = {
       "192.168.178.10" = ["proxmox"];
       "192.168.178.2" = ["pihole"];

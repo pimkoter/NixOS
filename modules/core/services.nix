@@ -13,6 +13,11 @@
         "--no-logs-no-support"
       ];
     };
+    fail2ban = {
+      enable = true;
+      bantime = "10m";
+      bantime-increment.factor = "6";
+    };
   };
   hardware.bluetooth = {
     enable = true;
