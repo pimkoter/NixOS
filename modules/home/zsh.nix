@@ -16,7 +16,7 @@
     historySubstringSearch.enable = true;
 
     initContent = ''
-      if [[ $- == *i* ]]; then
+      if [[ $- == *i* ]] && [[ -z "$DECOR_KITTY" ]]; then
         fastfetch
       fi
     '';
