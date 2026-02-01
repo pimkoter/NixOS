@@ -13,7 +13,6 @@
     evince # PDF/document viewer
     fastfetch # System info fetch tool
     ffmpeg # Audio/video processing toolkit
-    flatpak # Flatpak package manager
     fzf # Fuzzy finder
     gcc # GNU C/C++ compiler
     gdu # Graphical Disk Usage

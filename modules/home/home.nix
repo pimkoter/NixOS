@@ -3,6 +3,7 @@
 
   imports = [
     ./bat.nix
+    ./eww.nix
     ./eza.nix
     ./fastfetch.nix
     ./git.nix

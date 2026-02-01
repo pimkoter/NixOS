@@ -40,7 +40,7 @@
       inherit system;
       specialArgs = {inherit userdata system inputs;};
       modules = [
-        ./modules/core/default.nix
+        ./modules/core/core.nix
         inputs.stylix.nixosModules.stylix
         home-manager.nixosModules.home-manager
         {
