@@ -160,6 +160,11 @@ in {
         Mod+Shift+P { power-off-monitors; }
     }
 
+    gestures {
+      hot-corner {
+        off
+      }
+    }
     // =====================
     // ENVIRONMENT
     // =====================

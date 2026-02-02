@@ -15,11 +15,9 @@
     ffmpeg # Audio/video processing toolkit
     fzf # Fuzzy finder
     gcc # GNU C/C++ compiler
-    gdu # Graphical Disk Usage
     git # Version control system
     gping # Graphical Ping Utility
     grub2 # Bootloader
-    greetd # Wayland login manager daemon
     heroic # Epic/GOG game launcher
     kitty # GPU-accelerated terminal emulator
     lazygit # TUI Git client
@@ -38,11 +36,8 @@
     vesktop # Discord Client
     wget # Command-line file downloader
     wl-clipboard-rs # Wayland clipboard utilities (wl-copy/wl-paste)
-    wlogout # Wayland logout menu
-    wofi # Wayland app launcher (rofi-like)
     xwayland # X11 compatibility layer for Wayland
     xwayland-satellite # Isolated Xwayland helper
-    zed-editor # Zed code editor
 
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default # Noctalia Wayland compositor package set
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default # Zen Browser (Firefox-based)
