@@ -159,12 +159,6 @@ in {
         Ctrl+Alt+Delete { quit; }
         Mod+Shift+P { power-off-monitors; }
     }
-
-    gestures {
-      hot-corner {
-        off
-      }
-    }
     // =====================
     // ENVIRONMENT
     // =====================
@@ -257,7 +251,7 @@ in {
 
     output "eDP-2" {
         mode "2560x1080@60"
-        scale 2
+        scale 1.5
         position x=3840 y=0
     }
 
