@@ -29,7 +29,7 @@
       c = "clear";
       bottom = "btm";
       test = "sudo nixos-rebuild test --flake ~/.System/.#NixBTW";
-      update = "cd ~/.System && nix flake update";
+      update = "cd ~/.System && nix flake update && sudo nixos-rebuild switch --update --flake .#NixBTW";
       upgrade = "sudo nixos-rebuild switch --flake ~/.System/.#NixBTW";
       ssn = "sudo systemctl poweroff";
       ssr = "sudo systemctl reboot";

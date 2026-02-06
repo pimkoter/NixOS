@@ -1,8 +1,16 @@
 {pkgs, ...}: {
-  virtualisation.libvirtd.enable = true;
+  virtualisation = {
+    libvirtd = {
+      enable = true;
+      qemu.swtpm.enable = true;
+    };
+    spiceUSBRedirection.enable = true;
+  };
 
-  programs.virt-manager.enable = true;
-  programs.dconf.enable = true;
+  programs = {
+    virt-manager.enable = true;
+    dconf.enable = true;
+  };
 
   environment.systemPackages = with pkgs; [
     qemu_kvm
@@ -11,9 +19,8 @@
     OVMF # UEFI for Windows/Linux
   ];
 
+  services.spice-vdagentd.enable = true;
+
   # KVM acceleration
   boot.kernelModules = ["kvm-intel"];
-
-  # Optional but recommended
-  hardware.graphics.enable = true;
 }
