@@ -5,7 +5,7 @@
     ./hardware-configuration.nix
     ./miscellaneous.nix
     ./networking.nix
-    ./pkgs.nix
+    ./packages/pkgs.nix
     ./programs.nix
     ./sddm.nix
     ./services.nix
