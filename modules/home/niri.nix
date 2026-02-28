@@ -28,7 +28,7 @@ in {
         Mod+T		 cooldown-ms=200            { spawn "kitty"; }
         Mod+D		 cooldown-ms=200            { spawn "legcord"; }
         Mod+F		 cooldown-ms=200            { spawn "nautilus"; }
-        Mod+B		 cooldown-ms=200            { spawn "zen"; }
+        Mod+B		 cooldown-ms=200            { spawn "zen-beta"; }
         Mod+S		 cooldown-ms=200            { spawn "steam"; }
         Mod+Shift+M  cooldown-ms=200            { spawn "pavucontrol"; }
         Mod+Y        cooldown-ms=200            { spawn "kitty" "yazi" ; }
