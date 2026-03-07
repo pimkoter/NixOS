@@ -37,6 +37,7 @@
       gens = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
 
       ssh = "kitten ssh";
+      shell = "nix-shell -p";
 
       ls = "eza";
       lt = "eza --tree --level-2";
