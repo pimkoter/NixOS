@@ -69,8 +69,8 @@ in {
         Mod+X repeat=false { toggle-overview; }
 
         Mod+H { focus-column-left; }
-        Mod+J { focus-window-down; }
-        Mod+K { focus-window-up; }
+        Mod+J { focus-workspace-down; }
+        Mod+K { focus-workspace-up; }
         Mod+L { focus-column-right; }
 
         Mod+Left  { focus-column-left; }
@@ -93,6 +93,7 @@ in {
         // --- Monitor Focus ---
         Mod+Shift+H { focus-monitor-left; }
         Mod+Shift+L { focus-monitor-right; }
+
 
         Mod+Shift+Ctrl+H { move-column-to-monitor-left; }
         Mod+Shift+Ctrl+L { move-column-to-monitor-right; }
