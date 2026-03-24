@@ -24,6 +24,5 @@
     xwayland-satellite # Isolated Xwayland helper
 
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default # Noctalia Wayland compositor package set
-    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default # Zen Browser (Firefox-based)
   ];
 }

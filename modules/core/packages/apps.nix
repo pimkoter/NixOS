@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    brave # Browser
     evince # PDF/document viewer
     heroic # Epic/GOG game launcher
     obsidian # Markdown knowledge base
