@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    stable.url = "github:nixos/nixpkgs/nixos-25.11";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -27,6 +28,10 @@
     ...
   }: let
     system = "x86_64-linux";
+    stable = import inputs.stable {
+      inherit system;
+      config.allowUnfree = true;
+    };
     userdata = {
       user = "pim";
       host = "NixBTW";
@@ -34,7 +39,7 @@
   in {
     nixosConfigurations.NixBTW = nixpkgs.lib.nixosSystem {
       inherit system;
-      specialArgs = {inherit userdata system inputs;};
+      specialArgs = {inherit userdata system inputs stable;};
       modules = [
         ./modules/core/core.nix
         inputs.stylix.nixosModules.stylix

@@ -10,6 +10,5 @@
     steam # Steam game platform client
     thunderbird # Email Client
     vesktop # Discord Client
-    winboat # Windows Emulator
   ];
 }

@@ -13,7 +13,6 @@
     ./nvf.nix
     ./starship.nix
     ./tmux.nix
-    ./yazi/default.nix
     ./zoxide.nix
     ./zsh.nix
   ];
