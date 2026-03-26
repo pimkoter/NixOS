@@ -48,7 +48,7 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            extraSpecialArgs = {inherit userdata system inputs;};
+            extraSpecialArgs = {inherit userdata system inputs stable;};
             users.pim = import ./modules/home/home.nix;
           };
         }
