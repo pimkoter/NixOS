@@ -6,6 +6,7 @@
     obsidian # Markdown knowledge base
     prismlauncher # Minecraft launcher
     qbittorrent # BitTorrent client
+    satisfactorymodmanager # Modmanager for satisfactory
     spotify # Music streaming client
     steam # Steam game platform client
     thunderbird # Email Client

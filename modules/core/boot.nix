@@ -7,7 +7,7 @@
 }: {
   boot = {
     kernelPackages = stable.linuxPackages_zen;
-    kernelModules = ["v4l2loopback"];
+    kernelModules = ["nvidia"];
     extraModulePackages = [config.boot.kernelPackages.v4l2loopback];
     kernel.sysctl = {"vm.max_map_count" = 2147483642;};
     loader = {

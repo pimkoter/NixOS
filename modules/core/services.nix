@@ -23,12 +23,4 @@
     enable = true;
     powerOnBoot = true;
   };
-
-  # Service to revive NetworkManager if it dies
-  systemd.services.NetworkManager = {
-    serviceConfig = {
-      Restart = "on-failure";
-      RestartSec = 5;
-    };
-  };
 }

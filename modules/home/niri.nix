@@ -11,8 +11,6 @@ in {
         spawn-at-startup "spotify"
         spawn-at-startup "vesktop"
 
-        spawn-at-startup "kitty --class=decor-kitty -e cava";
-
     // =====================
     // KEYBINDS
     // =====================
@@ -26,14 +24,9 @@ in {
         Mod+Space	 cooldown-ms=200            { spawn-sh "noctalia-shell ipc call launcher toggle"; }
 
         Mod+T		 cooldown-ms=200            { spawn "kitty"; }
-        Mod+D		 cooldown-ms=200            { spawn "legcord"; }
-        Mod+F		 cooldown-ms=200            { spawn "nautilus"; }
-        Mod+B		 cooldown-ms=200            { spawn "zen-beta"; }
-        Mod+S		 cooldown-ms=200            { spawn "steam"; }
+        Mod+D		 cooldown-ms=200            { spawn "vesktop"; }
+        Mod+B		 cooldown-ms=200            { spawn "brave"; }
         Mod+Shift+M  cooldown-ms=200            { spawn "pavucontrol"; }
-        Mod+Y        cooldown-ms=200            { spawn "kitty" "yazi" ; }
-
-        Mod+Ctrl+T { spawn "kitty" "--class=floating-kitty"; }
 
         // --- Lock / Accessibility ---
         Super+Alt+L  cooldown-ms=200            { spawn-sh "noctalia-shell ipc call lockScreen toggle"; }
