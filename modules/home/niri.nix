@@ -29,7 +29,7 @@ in {
         Mod+Shift+M  cooldown-ms=200            { spawn "pavucontrol"; }
 
         // --- Lock / Accessibility ---
-        Super+Alt+L  cooldown-ms=200            { spawn-sh "noctalia-shell ipc call lockScreen toggle"; }
+        Super+L  cooldown-ms=200            { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
 
         // --- Media / Volume ---
         XF86AudioRaiseVolume allow-when-locked=true {
@@ -233,17 +233,17 @@ in {
     // =====================
     // OUTPUTS
     // =====================
-    output "DP-4" {
+    output "DP-3" {
         mode "1920x1080@60"
         position x=0    y=0
     }
 
-    output "DP-6" {
+    output "DP-5" {
         mode "1920x1080@164.999"
         position x=1920 y=0
     }
 
-    output "eDP-2" {
+    output "eDP-1" {
         mode "2560x1080@60"
         scale 1.5
         position x=3840 y=0

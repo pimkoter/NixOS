@@ -29,8 +29,8 @@
       c = "clear";
       bottom = "btm";
       test = "sudo nixos-rebuild test --flake ~/.System/.#NixBTW";
-      update = "cd ~/.System && nix flake update && sudo nixos-rebuild switch --upgrade --flake .#NixBTW";
-      upgrade = "sudo nixos-rebuild switch --flake ~/.System/.#NixBTW";
+      update = "cd ~/.System && nix flake update && sudo nixos-rebuild build --upgrade --flake .#NixBTW";
+      upgrade = "sudo nixos-rebuild build --flake ~/.System/.#NixBTW";
       ssn = "sudo systemctl poweroff";
       ssr = "sudo systemctl reboot";
       ff = "fastfetch";
