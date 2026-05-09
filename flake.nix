@@ -20,6 +20,10 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    helium-browser = {
+      url = "github:AlvaroParker/helium-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {
@@ -39,7 +43,14 @@
   in {
     nixosConfigurations.NixBTW = nixpkgs.lib.nixosSystem {
       inherit system;
-      specialArgs = {inherit userdata system inputs stable;};
+      specialArgs = {
+        inherit
+          userdata
+          system
+          inputs
+          stable
+          ;
+      };
       modules = [
         ./modules/core/core.nix
         inputs.stylix.nixosModules.stylix

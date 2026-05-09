@@ -1,6 +1,9 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
-    brave # Browser
     evince # PDF/document viewer
     heroic # Epic/GOG game launcher
     obsidian # Markdown knowledge base
@@ -11,5 +14,7 @@
     steam # Steam game platform client
     thunderbird # Email Client
     vesktop # Discord Client
+
+    inputs.helium-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 }

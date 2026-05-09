@@ -1,6 +1,4 @@
-{...}: {
-  home.stateVersion = "25.05";
-
+{inputs, ...}: {
   imports = [
     ./bat.nix
     ./eww.nix
@@ -16,4 +14,7 @@
     ./zoxide.nix
     ./zsh.nix
   ];
+
+  home.stateVersion = "25.05";
+  gtk.gtk4.theme = null;
 }

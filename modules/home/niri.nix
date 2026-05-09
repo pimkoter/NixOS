@@ -25,7 +25,7 @@ in {
 
         Mod+T		 cooldown-ms=200            { spawn "kitty"; }
         Mod+D		 cooldown-ms=200            { spawn "vesktop"; }
-        Mod+B		 cooldown-ms=200            { spawn "brave"; }
+        Mod+B		 cooldown-ms=200            { spawn "helium"; }
         Mod+Shift+M  cooldown-ms=200            { spawn "pavucontrol"; }
 
         // --- Lock / Accessibility ---
@@ -233,17 +233,17 @@ in {
     // =====================
     // OUTPUTS
     // =====================
-    output "DP-3" {
+    output "DP-4" {
         mode "1920x1080@60"
         position x=0    y=0
     }
 
-    output "DP-5" {
+    output "DP-6" {
         mode "1920x1080@164.999"
         position x=1920 y=0
     }
 
-    output "eDP-1" {
+    output "eDP-2" {
         mode "2560x1080@60"
         scale 1.5
         position x=3840 y=0
