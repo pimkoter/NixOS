@@ -20,6 +20,7 @@
     ripgrep # Fast recursive search (grep alternative)
     starship # Cross-shell prompt
     wl-clipboard-rs # Wayland clipboard utilities (wl-copy/wl-paste)
+    xdg-desktop-portal-gnome # Screensharing tool
     xwayland # X11 compatibility layer for Wayland
     xwayland-satellite # Isolated Xwayland helper
 

@@ -63,16 +63,16 @@
         }
         {
           type = "cpu";
-          key = "│ ├󰻠";
+          key = "  ├󰻠";
         }
         {
           type = "gpu";
-          key = "│ ├󰻑";
+          key = "  ├󰻑";
           format = "{2}";
         }
         {
           type = "memory";
-          key = "│ ├󰾆";
+          key = "  └󰾆";
         }
       ];
     };

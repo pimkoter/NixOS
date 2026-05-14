@@ -9,7 +9,7 @@ in {
 
         spawn-at-startup "noctalia-shell"
         spawn-at-startup "spotify"
-        spawn-at-startup "vesktop"
+        spawn-at-startup "legcord"
 
     // =====================
     // KEYBINDS
@@ -24,7 +24,7 @@ in {
         Mod+Space	 cooldown-ms=200            { spawn-sh "noctalia-shell ipc call launcher toggle"; }
 
         Mod+T		 cooldown-ms=200            { spawn "kitty"; }
-        Mod+D		 cooldown-ms=200            { spawn "vesktop"; }
+        Mod+D		 cooldown-ms=200            { spawn "legcord"; }
         Mod+B		 cooldown-ms=200            { spawn "helium"; }
         Mod+Shift+M  cooldown-ms=200            { spawn "pavucontrol"; }
 
