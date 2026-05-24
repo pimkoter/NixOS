@@ -2,7 +2,7 @@
   environment.systemPackages = with pkgs; [
     # Languages
     python315 # Python compiler
-    gcc # C / C++ Compiler
+    gcc # C / C++ compiler
 
     # Network Stuff
     nmap # Network Mapper

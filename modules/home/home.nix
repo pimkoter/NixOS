@@ -1,4 +1,4 @@
-{inputs, ...}: {
+{
   imports = [
     ./bat.nix
     ./eza.nix
@@ -8,7 +8,6 @@
     ./niri.nix
     ./noctalia.nix
     ./nvf.nix
-    ./ollama.nix
     ./starship.nix
     ./tmux.nix
     ./zoxide.nix

@@ -42,7 +42,6 @@
       languages = {
         enableFormat = true;
         enableTreesitter = true;
-        enableLSP = true;
 
         nix.enable = true;
         yaml.enable = true;
