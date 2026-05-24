@@ -2,10 +2,10 @@
   imports = [
     ./boot.nix
     ./drivers.nix
-    ./hardware-configuration.nix
     ./miscellaneous.nix
     ./networking.nix
     ./packages/pkgs.nix
+    ./plymouth.nix
     ./programs.nix
     ./sddm.nix
     ./services.nix

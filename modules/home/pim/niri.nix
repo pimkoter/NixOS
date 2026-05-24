@@ -241,17 +241,17 @@ in {
     // =====================
     // OUTPUTS
     // =====================
-    output "DP-4" {
+    output "DP-3" {
         mode "1920x1080@60"
         position x=0    y=0
     }
 
-    output "DP-6" {
+    output "DP-5" {
         mode "1920x1080@164.999"
         position x=1920 y=0
     }
 
-    output "eDP-2" {
+    output "eDP-1" {
         mode "2560x1080@60"
         scale 1.5
         position x=3840 y=0

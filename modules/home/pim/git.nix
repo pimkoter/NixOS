@@ -1,6 +1,10 @@
-{userdata, ...}: let
-  name = userdata.user;
-  mail = userdata.host;
+{
+  config,
+  hostName,
+  ...
+}: let
+  name = config.home.username;
+  mail = hostName;
 in {
   programs.git = {
     enable = true;

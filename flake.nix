@@ -32,38 +32,47 @@
     ...
   }: let
     system = "x86_64-linux";
+
     stable = import inputs.stable {
       inherit system;
       config.allowUnfree = true;
     };
-    userdata = {
-      user = "pim";
-      host = "NixBTW";
-    };
-  in {
-    nixosConfigurations.NixBTW = nixpkgs.lib.nixosSystem {
-      inherit system;
-      specialArgs = {
-        inherit
-          userdata
-          system
-          inputs
-          stable
-          ;
+
+    # Define your infrastructure inventory here
+    hostsConfig = {
+      NixBTW = {
+        users = ["pim"];
       };
-      modules = [
-        ./modules/core/core.nix
-        inputs.stylix.nixosModules.stylix
-        home-manager.nixosModules.home-manager
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            extraSpecialArgs = {inherit userdata system inputs stable;};
-            users.pim = import ./modules/home/home.nix;
-          };
-        }
-      ];
+      # To add more machines in the future, just uncomment and modify:
+      # LaptopBTW = {
+      #   users = [ "pim" "alice" ];
+      # };
     };
+
+    mkHost = hostName: hostData:
+      nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = {inherit system inputs hostName stable;};
+        modules = [
+          ./hosts/${hostName}/hardware-configuration.nix
+          ./modules/core/core.nix
+          ./modules/core/plymouth.nix # Ensuring your fresh Breeze animation is imported!
+          inputs.stylix.nixosModules.stylix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = {inherit system inputs stable hostName;};
+              users = nixpkgs.lib.genAttrs hostData.users (
+                userName:
+                  import (./modules/home + "/${userName}/home.nix")
+              );
+            };
+          }
+        ];
+      };
+  in {
+    nixosConfigurations = nixpkgs.lib.mapAttrs (hostName: hostData: mkHost hostName hostData) hostsConfig;
   };
 }

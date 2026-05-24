@@ -1,4 +1,4 @@
-{
+{hostName, ...}: {
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true;
@@ -28,8 +28,8 @@
       cat = "bat";
       c = "clear";
       bottom = "btm";
-      update = "cd ~/.System && nix flake update && sudo nixos-rebuild switch --flake .#NixBTW";
-      upgrade = "sudo nixos-rebuild switch  --flake ~/.System/.#NixBTW";
+      update = "cd ~/.System && git add . && nix flake update && sudo nixos-rebuild switch --flake #${hostName}";
+      upgrade = "cd ~/.System && git add . && sudo nixos-rebuild switch  --flake #${hostName}";
       ssn = "sudo systemctl poweroff";
       ssr = "sudo systemctl reboot";
       ff = "fastfetch";

@@ -2,31 +2,38 @@
   config,
   pkgs,
   stable,
-  lib,
   ...
 }: {
   boot = {
-    kernelPackages = stable.linuxPackages_zen;
-    initrd.kernelModules = ["nvidia"];
-    kernelModules = ["nvidia"];
+    kernelPackages = pkgs.linuxPackages_zen;
     extraModulePackages = [config.boot.kernelPackages.v4l2loopback];
     kernel.sysctl = {"vm.max_map_count" = 2147483642;};
+    kernelModules = ["nvidia"];
+
+    initrd.kernelModules = ["nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm" "i915"];
+    initrd.systemd.enable = true;
+
+    consoleLogLevel = 3;
+    initrd.verbose = false;
+    kernelParams = [
+      "quiet"
+      "splash"
+      "boot.shell_on_fail"
+      "loglevel=3"
+      "rd.systemd.show_status=false"
+      "rd.udev.log_level=3"
+      "nvidia-drm.modeset=1"
+      "i915.fastboot=1"
+      "video=2560x1600"
+      "video=efifb:mode=0"
+      "vt.global_cursor_default=0"
+      "acpi_osi=Linux"
+    ];
+
     loader = {
-      systemd-boot.enable = false;
+      systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
-      grub = {
-        enable = true;
-        efiSupport = true;
-        device = "nodev";
-        theme = lib.mkForce "${
-          (pkgs.fetchFromGitHub {
-            owner = "harishnkr";
-            repo = "bsol";
-            rev = "afcc66069d104e4c02bc962e6bebd9c453c0f163";
-            hash = "sha256-cj8yfdnR0n814piUZowUKEB2n9CWlsC97DScqxn7Cto=";
-          })
-        }/bsol";
-      };
+      timeout = null;
     };
   };
 }

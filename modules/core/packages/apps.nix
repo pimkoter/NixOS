@@ -18,4 +18,12 @@
 
     inputs.helium-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
+
+  programs = {
+    steam = {
+      enable = true;
+      remotePlay.openFirewall = true;
+      dedicatedServer.openFirewall = true;
+    };
+  };
 }
