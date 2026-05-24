@@ -156,7 +156,6 @@ in {
     // =====================
     // ENVIRONMENT
     // =====================
-
     hotkey-overlay {
         skip-at-startup
     }
@@ -169,6 +168,15 @@ in {
         TERMINAL "kitty"
         XCURSOR_THEME "Bibata-Modern-Ice"
         XCURSOR_SIZE "24"
+    }
+
+    // =====================
+    // Gestures
+    // =====================
+    gestures {
+      hot-corners {
+        off
+      }
     }
 
     // =====================
