@@ -4,7 +4,7 @@
     ./drivers.nix
     ./miscellaneous.nix
     ./networking.nix
-    ./packages/pkgs.nix
+    ./pkgs.nix
     ./plymouth.nix
     ./programs.nix
     ./sddm.nix
