@@ -1,7 +1,6 @@
 {inputs, ...}: {
   imports = [
     ./bat.nix
-    ./eww.nix
     ./eza.nix
     ./fastfetch.nix
     ./git.nix
@@ -9,6 +8,7 @@
     ./niri.nix
     ./noctalia.nix
     ./nvf.nix
+    ./ollama.nix
     ./starship.nix
     ./tmux.nix
     ./zoxide.nix

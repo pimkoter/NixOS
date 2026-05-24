@@ -15,6 +15,8 @@
       lineNumberMode = "number";
       enableLuaLoader = true;
       preventJunkFiles = true;
+      autocomplete.nvim-cmp.enable = true;
+      telescope.enable = true;
 
       options = {
         tabstop = 4;
@@ -31,47 +33,6 @@
         };
       };
 
-      keymaps = [
-        {
-          key = "jk";
-          mode = ["i"];
-          action = "<ESC>";
-          desc = "Exit insert mode";
-        }
-        {
-          key = "<leader>nh";
-          mode = ["n"];
-          action = ":nohl<CR>";
-          desc = "Clear search highlights";
-        }
-        {
-          key = "<leader>ff";
-          mode = ["n"];
-          action = "<cmd>Telescope find_files<cr>";
-          desc = "Find files";
-        }
-        {
-          key = "<leader>lg";
-          mode = ["n"];
-          action = "<cmd>Telescope live_grep<cr>";
-          desc = "Search contents";
-        }
-        {
-          key = "<leader>fe";
-          mode = ["n"];
-          action = "<cmd>Neotree toggle<cr>";
-          desc = "Toggle file explorer";
-        }
-        {
-          key = "<leader>t";
-          mode = ["n"];
-          action = "<cmd>ToggleTerm<CR>";
-          desc = "Toggle terminal";
-        }
-      ];
-
-      diagnostics.enable = true;
-
       lsp = {
         enable = true;
         formatOnSave = true;
@@ -81,11 +42,10 @@
       languages = {
         enableFormat = true;
         enableTreesitter = true;
+        enableLSP = true;
 
-        nix = {
-          enable = true;
-          lsp.servers = ["nil"];
-        };
+        nix.enable = true;
+        yaml.enable = true;
       };
 
       visuals = {

@@ -1,5 +1,0 @@
-{
-  programs.eww = {
-    configDir = ./eww;
-  };
-}
