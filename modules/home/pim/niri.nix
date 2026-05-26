@@ -29,7 +29,7 @@ in {
         Mod+Shift+M  cooldown-ms=200            { spawn "pavucontrol"; }
 
         // --- Lock / Accessibility ---
-        Super+L  cooldown-ms=200            { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
+        Super+Shift+L  cooldown-ms=200            { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
 
         // --- Media / Volume ---
         XF86AudioRaiseVolume allow-when-locked=true {
