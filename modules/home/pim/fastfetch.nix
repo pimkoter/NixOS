@@ -5,7 +5,7 @@
     settings = {
       schema = "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json";
 
-      logo.padding.top = 1;
+      logo.padding.top = 2;
       display.separator = "  󰑃  ";
 
       modules = [
@@ -17,6 +17,10 @@
         {
           type = "kernel";
           key = "│ ├";
+        }
+        {
+          type = "uptime";
+          key = "│ ├󱎫";
         }
         {
           type = "packages";
@@ -64,6 +68,7 @@
         {
           type = "cpu";
           key = "  ├󰻠";
+          format = "{1}";
         }
         {
           type = "gpu";
@@ -72,7 +77,13 @@
         }
         {
           type = "memory";
-          key = "  └󰾆";
+          key = "  ├󰾆";
+        }
+        {
+          type = "localip"; # Added LocalIP
+          key = "  └󰩟";
+          showIpv4 = true;
+          showIpv6 = false;
         }
       ];
     };

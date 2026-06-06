@@ -42,7 +42,6 @@
       languages = {
         enableFormat = true;
         enableTreesitter = true;
-
         nix.enable = true;
         yaml.enable = true;
       };
@@ -61,7 +60,6 @@
 
       autopairs.nvim-autopairs.enable = true;
       snippets.luasnip.enable = true;
-
       filetree.neo-tree.enable = true;
       notify.nvim-notify.enable = true;
 

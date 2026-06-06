@@ -19,6 +19,7 @@
     polkit # Authorization framework
     ripgrep # Fast recursive search (grep alternative)
     starship # Cross-shell prompt
+    unzip # Zipping tool
     wl-clipboard-rs # Wayland clipboard utilities (wl-copy/wl-paste)
     xdg-desktop-portal-gnome # Screensharing tool
     xwayland # X11 compatibility layer for Wayland
@@ -46,6 +47,9 @@
     gcc # C / C++ compiler
     nmap # Network Mapper
     python315 # Python compiler
+    sdkmanager # Android tool
+    adb-sync # App to sync acces android files
+    android-tools # Fastboot options
 
     # --- Terminal Rice & Visuals ---
     cava # Terminal audio visualizer
