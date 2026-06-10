@@ -1,5 +1,10 @@
 {config, ...}: let
   colors = config.stylix.base16Scheme;
+  monitors = {
+    left = "DP-4";
+    middle = "DP-5";
+    right = "eDP-1";
+  };
 in {
   xdg.configFile."niri/config.kdl".text = ''
 
@@ -242,17 +247,17 @@ in {
     // =====================
     // OUTPUTS
     // =====================
-    output "DP-3" {
+    output "${monitors.left}" {
         mode "1920x1080@60"
         position x=0    y=0
     }
 
-    output "DP-5" {
+    output "${monitors.middle}" {
         mode "1920x1080@164.999"
         position x=1920 y=0
     }
 
-    output "eDP-1" {
+    output "${monitors.right}" {
         mode "2560x1080@60"
         scale 1.5
         position x=3840 y=0
@@ -276,18 +281,5 @@ in {
         max-width 1920
         max-height 1080
     }
-
-    window-rule {
-        match app-id=r#"^decor-kitty$"#
-        open-floating true
-        open-focused false
-        baba-is-float true
-        draw-border-with-background false
-        opacity 0.4
-
-        default-column-width { fixed 600; }
-        default-window-height { fixed 400; }
-    }
-
   '';
 }
