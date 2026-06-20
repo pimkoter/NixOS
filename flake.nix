@@ -24,6 +24,7 @@
       url = "github:AlvaroParker/helium-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    fetch.url = "github:areofyl/fetch";
   };
 
   outputs = inputs @ {

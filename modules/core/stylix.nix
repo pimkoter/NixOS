@@ -1,9 +1,14 @@
-{pkgs, ...}: {
+{pkgs, ...}: let
+  catppuccin-wall = pkgs.fetchurl {
+    url = "https://files.orangc.net/media/walls-catppuccin-mocha/abstract-swirls.jpg";
+    sha256 = "sha256-QyvJgQ7FHLoFmeVc9HPQSnOEmT0aAEpWFblh6PDyluw=";
+  };
+in {
   stylix = {
     enable = true;
-    image = ../wallpapers/black-and-white-3840x2160-21293.jpg;
+    image = catppuccin-wall;
     polarity = "dark";
-    opacity.terminal = 0.8;
+    opacity.terminal = 0.9;
     cursor = {
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Ice";
@@ -29,7 +34,6 @@
         popups = 12;
       };
     };
-
     targets = {
       plymouth.enable = false;
       kmscon.enable = false;

@@ -11,61 +11,50 @@ in {
     // =====================
     // STARTUP APPS
     // =====================
-
-        spawn-at-startup "noctalia-shell"
-        spawn-at-startup "spotify"
-        spawn-at-startup "legcord"
-        spawn-at-startup "steam"
+    spawn-at-startup "noctalia-shell"
+    spawn-at-startup "spotify"
+    spawn-at-startup "legcord"
+    spawn-at-startup "steam"
 
     // =====================
     // KEYBINDS
     // =====================
     binds {
 
-        // --- Help ---
         Mod+Shift+Slash { show-hotkey-overlay; }
 
-
         // --- Applications ---
-        Mod+Space	 cooldown-ms=200            { spawn-sh "noctalia-shell ipc call launcher toggle"; }
-
-        Mod+T		 cooldown-ms=200            { spawn "kitty"; }
-        Mod+D		 cooldown-ms=200            { spawn "legcord"; }
-        Mod+B		 cooldown-ms=200            { spawn "helium"; }
+        Mod+Space   cooldown-ms=200            { spawn-sh "noctalia-shell ipc call launcher toggle"; }
+        Mod+T        cooldown-ms=200            { spawn "kitty"; }
+        Mod+D        cooldown-ms=200            { spawn "legcord"; }
+        Mod+B        cooldown-ms=200            { spawn "helium"; }
         Mod+Shift+M  cooldown-ms=200            { spawn "pavucontrol"; }
 
         // --- Lock / Accessibility ---
         Super+Shift+L  cooldown-ms=200            { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
 
         // --- Media / Volume ---
-        XF86AudioRaiseVolume allow-when-locked=true {
-            spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0";
-        }
-        XF86AudioLowerVolume allow-when-locked=true {
-            spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-";
-        }
-        XF86AudioMute allow-when-locked=true {
-            spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
-        }
-        XF86AudioMicMute allow-when-locked=true {
-            spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
-        }
+        XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
+        XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
+        XF86AudioMute allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+        XF86AudioMicMute allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
         XF86AudioPlay allow-when-locked=true { spawn-sh "playerctl play-pause"; }
         XF86AudioStop allow-when-locked=true { spawn-sh "playerctl stop"; }
         XF86AudioPrev allow-when-locked=true { spawn-sh "playerctl previous"; }
         XF86AudioNext allow-when-locked=true { spawn-sh "playerctl next"; }
 
         // --- Brightness ---
-        XF86MonBrightnessUp allow-when-locked=true {
-            spawn "brightnessctl" "--class=backlight" "set" "+10%";
-        }
-        XF86MonBrightnessDown allow-when-locked=true {
-            spawn "brightnessctl" "--class=backlight" "set" "10%-";
-        }
+        XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
+        XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
-    // --- Window / Column Navigation ---
+        // --- Window / Column Navigation ---
         Mod+Q repeat=false { close-window; }
         Mod+X repeat=false { toggle-overview; }
+
+        Mod+A { focus-column-left; }
+        Mod+S { focus-workspace-down; }
+        Mod+W { focus-workspace-up; }
+        Mod+Right { focus-column-right; } // Fixed the lowercase 'mod+D' conflict/typo here
 
         Mod+H { focus-column-left; }
         Mod+J { focus-workspace-down; }
@@ -73,33 +62,41 @@ in {
         Mod+L { focus-column-right; }
 
         Mod+Left  { focus-column-left; }
-        Mod+Down  { focus-window-down; }
-        Mod+Up    { focus-window-up; }
-        Mod+Right { focus-column-right; }
+        Mod+Down  { focus-workspace-down; }
+        Mod+Up    { focus-workspace-up; }
 
         // --- Move Windows / Columns ---
-        Mod+Shift+Left  { move-column-left; }
-        Mod+Shift+Right { move-column-right; }
+        Mod+Ctrl+A { move-column-left; }
+        Mod+Ctrl+D { move-column-right; }
 
         Mod+Ctrl+H { move-column-left; }
         Mod+Ctrl+L { move-column-right; }
 
-        Mod+Home        { focus-column-first; }
-        Mod+End         { focus-column-last; }
-        Mod+Ctrl+Home   { move-column-to-first; }
-        Mod+Ctrl+End    { move-column-to-last; }
+        Mod+Ctrl+Left  { move-column-left; }
+        Mod+Ctrl+Right { move-column-right; }
 
         // --- Monitor Focus ---
+        Mod+Shift+A { focus-monitor-left; }
+        Mod+Shift+D { focus-monitor-right; }
+
         Mod+Shift+H { focus-monitor-left; }
         Mod+Shift+L { focus-monitor-right; }
 
+        Mod+Shift+Ctrl+A { move-column-to-monitor-left; }
+        Mod+Shift+Ctrl+D { move-column-to-monitor-right; }
 
         Mod+Shift+Ctrl+H { move-column-to-monitor-left; }
         Mod+Shift+Ctrl+L { move-column-to-monitor-right; }
 
         // --- Workspaces ---
+        Mod+Shift+S { focus-workspace-down; }
+        Mod+Shift+W { focus-workspace-up; }
+
         Mod+Shift+J { focus-workspace-down; }
         Mod+Shift+K { focus-workspace-up; }
+
+        Mod+Ctrl+S { move-column-to-workspace-down; }
+        Mod+Ctrl+W { move-column-to-workspace-up; }
 
         Mod+Ctrl+J { move-column-to-workspace-down; }
         Mod+Ctrl+K { move-column-to-workspace-up; }
@@ -126,7 +123,6 @@ in {
 
         // --- Column Layout ---
         Mod+R        { switch-preset-column-width; }
-        Mod+Shift+R  { switch-preset-window-height; }
         Mod+Ctrl+R   { reset-window-height; }
 
         Mod+Minus { set-column-width "-10%"; }
@@ -141,25 +137,12 @@ in {
         Mod+C      { center-column; }
         Mod+Alt+C  { center-visible-columns; }
 
-        // --- Floating / Tabs ---
-        Mod+W       { toggle-window-floating; }
-        Mod+Shift+W { switch-focus-between-floating-and-tiling; }
-        Mod+V       { toggle-column-tabbed-display; }
-
         // --- Screenshots ---
-        Mod+Shift+S { screenshot; }
-        Ctrl+Print  { screenshot-screen; }
-        Alt+Print   { screenshot-window; }
-
-        // --- System ---
-        Mod+Escape allow-inhibiting=false {
-            toggle-keyboard-shortcuts-inhibit;
-        }
-        Mod+Shift+E { quit; }
-        Ctrl+Alt+Delete { quit; }
-        Mod+Shift+P { power-off-monitors; }
+        Mod+Shift+P { screenshot; }
+        Ctrl+P  { screenshot-screen; }
+        Alt+P   { screenshot-window; }
     }
-    // =====================
+
     // ENVIRONMENT
     // =====================
     hotkey-overlay {
@@ -216,7 +199,6 @@ in {
         preset-column-widths {
             proportion 0.33333
             proportion 0.5
-            proportion 0.66667
             proportion 1.0
         }
 
@@ -231,14 +213,6 @@ in {
             active-color "#${colors.base0D}"
             inactive-color "#${colors.base03}"
             urgent-color "#${colors.base08}"
-        }
-
-        shadow {
-            on
-            softness 30
-            spread 5
-            offset x=0 y=5
-            color "#0007"
         }
 
         struts {}
@@ -268,12 +242,6 @@ in {
     // =====================
 
     prefer-no-csd true
-
-    window-rule {
-        geometry-corner-radius 9
-        clip-to-geometry true
-        draw-border-with-background false
-    }
 
     window-rule {
         match app-id="Minecraft"
