@@ -17,7 +17,7 @@
 
     initContent = ''
       if [[ $- == *i* ]] && [[ -z "$DECOR_KITTY" ]]; then
-        fetch
+        fastfetch
       fi
     '';
 
@@ -32,7 +32,7 @@
       upgrade = "cd ~/.System && git add . && sudo nixos-rebuild switch  --flake #${hostName}";
       ssn = "sudo systemctl poweroff";
       ssr = "sudo systemctl reboot";
-      ff = "fetch";
+      ff = "fastfetch";
       gens = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
 
       ssh = "kitten ssh";
