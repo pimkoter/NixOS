@@ -8,7 +8,7 @@ in {
     enable = true;
     image = catppuccin-wall;
     polarity = "dark";
-    opacity.terminal = 0.9;
+    opacity.terminal = 0.7;
     cursor = {
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Ice";
@@ -35,6 +35,7 @@ in {
       };
     };
     targets = {
+      nvf.enable = false;
       plymouth.enable = false;
       kmscon.enable = false;
     };
