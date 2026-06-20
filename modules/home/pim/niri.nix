@@ -30,9 +30,6 @@ in {
         Mod+B        cooldown-ms=200            { spawn "helium"; }
         Mod+Shift+M  cooldown-ms=200            { spawn "pavucontrol"; }
 
-        // --- Lock / Accessibility ---
-        Super+Shift+L  cooldown-ms=200            { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
-
         // --- Media / Volume ---
         XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
         XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
