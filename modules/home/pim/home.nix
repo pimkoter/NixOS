@@ -2,7 +2,7 @@
   imports = [
     ./bat.nix
     ./eza.nix
-    ./fetch.nix
+    ./fastfetch.nix
     ./git.nix
     ./kitty.nix
     ./niri.nix
