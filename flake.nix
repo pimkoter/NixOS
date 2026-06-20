@@ -56,7 +56,7 @@
         modules = [
           ./hosts/${hostName}/hardware-configuration.nix
           ./modules/core/core.nix
-          ./modules/core/plymouth.nix # Ensuring your fresh Breeze animation is imported!
+          ./modules/core/plymouth.nix
           inputs.stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
           {
