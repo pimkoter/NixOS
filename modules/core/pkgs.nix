@@ -51,7 +51,7 @@
     sdkmanager # Android tool
     adb-sync # App to sync acces android files
     android-tools # Fastboot options
-    android-studio
+    androidStudioPackages.dev # Android Studio IDE
 
     # --- Terminal Rice & Visuals ---
     cava # Terminal audio visualizer
