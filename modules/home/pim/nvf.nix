@@ -18,6 +18,23 @@
       autocomplete.nvim-cmp.enable = true;
       telescope.enable = true;
 
+      assistant = {
+        copilot = {
+          enable = true;
+          cmp.enable = true;
+        };
+
+        codecompanion-nvim = {
+          enable = true;
+          setupOpts = {
+            interactions = {
+              chat = {adapter = "copilot";};
+              inline = {adapter = "copilot";};
+            };
+          };
+        };
+      };
+
       options = {
         tabstop = 4;
         shiftwidth = 2;
@@ -77,19 +94,5 @@
 
       comments.comment-nvim.enable = true;
     };
-  };
-
-  home.activation = {
-    dirtytalkUpdate = config.lib.dag.entryAfter ["writeBoundary"] ''
-      WORDLIST_FILE="$HOME/.config/nvim/spell/programming.utf-8.add"
-      if [ ! -f "$WORDLIST_FILE" ]; then
-        echo "Downloading programming wordlist..."
-        if ${config.programs.nvf.finalPackage}/bin/nvim -c "DirtytalkUpdate" -c "qa!" 2>/dev/null; then
-          echo "Done"
-        else
-          echo "Failed, continuing..." >&2
-        fi
-      fi
-    '';
   };
 }

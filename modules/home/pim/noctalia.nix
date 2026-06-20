@@ -477,7 +477,7 @@
       };
       wallpaper = {
         automationEnabled = false;
-        directory = "/home/pim/.System/modules/wallpapers";
+        directory = "/run/current-system/sw/share/wallpapers";
         enableMultiMonitorDirectories = false;
         enabled = true;
         fillColor = "#000000";

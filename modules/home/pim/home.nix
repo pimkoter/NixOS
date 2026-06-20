@@ -10,6 +10,7 @@
     ./nvf.nix
     ./starship.nix
     ./tmux.nix
+    ./wallpapers.nix
     ./zoxide.nix
     ./zsh.nix
   ];

@@ -80,10 +80,12 @@
           key = "  ├󰾆";
         }
         {
-          type = "localip"; # Added LocalIP
+          type = "localip";
           key = "  └󰩟";
           showIpv4 = true;
           showIpv6 = false;
+          namePrefix = "wl01";
+          defaultRouteOnly = false;
         }
       ];
     };

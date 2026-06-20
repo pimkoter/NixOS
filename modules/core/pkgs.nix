@@ -15,6 +15,7 @@
     grub2 # Bootloader
     lazygit # TUI Git client
     neovim # Vim-based text editor
+    openrgb # RGB lighting control software
     pavucontrol # PulseAudio/pipewire volume control GUI
     polkit # Authorization framework
     ripgrep # Fast recursive search (grep alternative)
@@ -50,6 +51,7 @@
     sdkmanager # Android tool
     adb-sync # App to sync acces android files
     android-tools # Fastboot options
+    android-studio
 
     # --- Terminal Rice & Visuals ---
     cava # Terminal audio visualizer
